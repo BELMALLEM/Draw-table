@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form  name="form" action="">
+        Row :<input type="text" id="row" name="row" value="" style="margin-left: 25px;">  <br>
+        Column: <input type="text" id="col" name="col" value=""><br>
+        <button class="button" onclick="maketable(row,col)">Tracer</button>
+    </form>
+
+    <script>function maketable(form){
+           
+            var  ligne = document.form.row.value;
+            var colonne= document.form.col.value;
+            tracer(ligne, colonne);
+            
+        }</script>
+      
+    <script> function tracer(l,c){
+        var table="<table>";
+        for(let i=0;i<l;i++){
+            table+="<tr> ";
+            for(let j=0;j<c;j++){
+                table+="<td>blabla</td>";
+            }
+            table+=" </tr> ";
+        }
+        table+="</table>";
+        document.write(table);
+    
+    }
+    </script>  
+</body>
+</html>
+
+
